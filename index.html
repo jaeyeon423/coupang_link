@@ -3,17 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>쿠팡 링크 변환기</title>
-    <link rel="stylesheet" href="style.css">
+    <title>comeback2352 | 인포크링크</title>
+    <style>
+        /* 폰트 및 기본 스타일 초기화 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #faece1; /* 기존 배경색 유지 */
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        /* 프로필 섹션 */
+        .profile-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-name {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 15px;
+        }
+        
+        /* 파트너스 공지 */
+        .partners-notice {
+            background-color: #343434;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-size: 12px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        /* 상품 카드 그리드 */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* 반응형 그리드 */
+            gap: 20px; /* 카드 사이 간격 */
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 개별 상품 카드 */
+        .product-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 180px; /* 이미지 높이 고정 */
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 15px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-title {
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 1.4;
+            /* 두 줄 이상 넘어갈 경우 말줄임표(...) 처리 */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            min-height: 42px; /* 제목이 2줄일 때 레이아웃이 깨지지 않도록 최소 높이 설정 */
+        }
+        
+        .product-price {
+            font-size: 14px;
+            color: #e53935;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>쿠팡 링크를 입력하세요</h1>
-        <input type="text" id="coupang-url" placeholder="https://www.coupang.com/vp/products/...">
-        <button onclick="generatePreview()">미리보기 생성</button>
-        <div id="preview-area">
-            </div>
+
+    <div class="profile-section">
+        <img src="https://d13k46lqgoj3d6.cloudfront.net/2025/6/27/2025-6-27-1750982734084.webp" alt="프로필 이미지" class="profile-image">
+        <h1 class="profile-name">comeback2352</h1>
     </div>
-    <script src="script.js"></script>
+
+    <div class="partners-notice">
+        이 게시물은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
+    </div>
+
+    <div class="product-grid">
+        <a href="https://link.coupang.com/a/cDBbPu" target="_blank" class="product-card">
+            <img src="https://d13k46lqgoj3d6.cloudfront.net/2025/7/8/2025-7-8-1751950873480.webp" alt="옷접기 폴더">
+            <div class="product-info">
+                <p class="product-title">52. 옷접기 정리 대형 폴더 판 고급형</p>
+            </div>
+        </a>
+
+        <a href="https://link.coupang.com/a/cDw2Fa" target="_blank" class="product-card">
+            <img src="https://d13k46lqgoj3d6.cloudfront.net/2025/7/7/2025-7-7-1751925003230.webp" alt="압축 소파">
+            <div class="product-info">
+                <p class="product-title">51. 압축 소파</p>
+            </div>
+        </a>
+
+        <a href="https://link.coupang.com/a/cDv1Ls" target="_blank" class="product-card">
+            <img src="https://d13k46lqgoj3d6.cloudfront.net/2025/7/7/2025-7-7-1751904575772.webp" alt="트랜스포머 테이블">
+            <div class="product-info">
+                <p class="product-title">50. 트랜스포머 테이블</p>
+            </div>
+        </a>
+
+        <a href="https://link.coupang.com/a/cDsp7B" target="_blank" class="product-card">
+            <img src="https://d13k46lqgoj3d6.cloudfront.net/2025/7/7/2025-7-7-1751886811932.webp" alt="라부부 케이스">
+            <div class="product-info">
+                <p class="product-title">49. 라부부 케이스</p>
+            </div>
+        </a>
+
+        <a href="https://link.coupang.com/a/cDqaY8" target="_blank" class="product-card">
+            <img src="https://d13k46lqgoj3d6.cloudfront.net/2025/7/7/2025-7-7-1751875295114.webp" alt="양반 다리 의자">
+            <div class="product-info">
+                <p class="product-title">48. 양반 다리 의자</p>
+            </div>
+        </a>
+
+        <a href="https://link.coupang.com/a/cBE3ZP" target="_blank" class="product-card">
+            <img src="https://d13k46lqgoj3d6.cloudfront.net/2025/6/27/2025-6-27-1750982932958.webp" alt="얼음 트레이">
+            <div class="product-info">
+                <p class="product-title">1. 여름 필수템! 얼음 트레이!</p>
+            </div>
+        </a>
+    </div>
+
 </body>
 </html>
